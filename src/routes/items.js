@@ -4,6 +4,7 @@ module.exports = function (app) {
 
   app.get('/api/items', async (req, res) => {
 
+    console.log('hello');
     try {
       var getResponse = await items.get(req);
       res.json(getResponse)
@@ -27,7 +28,7 @@ module.exports = function (app) {
   app.get('/api/items/:id', async (req, res) => {
 
     try {
-      var getResponse = await items.get(req);
+      var getResponse = await items.getById(req);
       res.json(getResponse)
 
     } catch (err) {

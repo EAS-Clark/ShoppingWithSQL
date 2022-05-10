@@ -24,3 +24,11 @@ const remove = async (id) => {
     const response = await query("DELETE FROM categories WHERE id=?" , id);
     return response;
 }
+
+module.exports = {
+    getAll,
+    getByID,
+    create,
+    update,
+    remove,
+}

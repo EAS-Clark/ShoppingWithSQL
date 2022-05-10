@@ -3,9 +3,7 @@ var categories = require('../route_functions/categories.js');
 module.exports = function (app) {
 
   app.get('/api/categories', async (req, res) => {
-    console.log('categories')
-    res.json('hi')
-    /*
+  
     try {
       var getResponse = await categories.get(req);
       res.json(getResponse)
@@ -13,7 +11,7 @@ module.exports = function (app) {
     } catch (err) {
       res.json(err);
     }
-*/
+
   });
 
   app.post("/api/categories", async (req, res) =>{
