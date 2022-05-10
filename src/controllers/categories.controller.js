@@ -7,7 +7,7 @@ const getAll = async () => {
 
 const create = async (name) => {
     const response = await query("INSERT INTO categories (name) VALUES (?)", [name]);
-    return
+    return response;
 }
 
 const getByID = async (id) => {

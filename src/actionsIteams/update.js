@@ -7,11 +7,13 @@ module.exports = async function (params, body, resolve, reject) {
     let category_id = body.category_id;
     let price = body.price;
     let image_url = body.image_url;
+    
 
     try {
         let row = await update(params, name, category_id, price, image_url);
         resolve({ "response": 'rows edited: ' + row.changedRows });
 
-    } catch {}
-    }
+    } catch {reject({ "response": 'uploaded failed:'});}
+    
+}
 
