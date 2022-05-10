@@ -7,9 +7,7 @@ module.exports = async function (body, resolve, reject) {
     try {
         let row = await create(name);
         resolve({ "response": 'uploaded id:' + row.insertId });
-    } catch {
-        reject({ "response": 'uploaded failed:'});
 
-    }
+    } catch (err) {reject({ "response": 'uploaded failed:'});}
 
 }  

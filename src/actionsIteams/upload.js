@@ -18,10 +18,7 @@ module.exports = async function (body, resolve, reject) {
         let row = await create(name, category_id, price, image_url);
         console.log(row)
         resolve({ "response": 'uploaded id:' + row.insertId });
-    } catch {
-
-
-    }
+    } catch (err) {reject({ "response": 'uploaded failed:'});}
 
 }  
 

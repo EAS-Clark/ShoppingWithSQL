@@ -11,5 +11,5 @@ module.exports = async function (params, body, resolve, reject) {
         let row = await update(params, name);
         resolve({ "response": 'rows edited: ' + row.changedRows });
 
-    } catch {}
-    }
+    } catch (err) {reject({ "response": 'upldate failed:'});}
+}

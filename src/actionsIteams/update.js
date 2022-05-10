@@ -13,7 +13,7 @@ module.exports = async function (params, body, resolve, reject) {
         let row = await update(params, name, category_id, price, image_url);
         resolve({ "response": 'rows edited: ' + row.changedRows });
 
-    } catch {reject({ "response": 'uploaded failed:'});}
+    } catch (err) {reject({ "response": 'upldate failed:'});}
     
 }
 
