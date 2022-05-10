@@ -8,5 +8,5 @@ CREATE TABLE categories (
 INSERT INTO categories 
   (name) 
 VALUES
-  ('Clark'),
-  ('Billy');
+  ('Food'),
+  ('Drink');
