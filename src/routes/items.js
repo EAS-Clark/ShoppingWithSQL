@@ -39,7 +39,7 @@ module.exports = function (app) {
   app.patch("/api/items/:id", async (req, res) =>{
 
     try {
-      var getResponse = await items.post(req);
+      var getResponse = await items.patch(req);
       res.json(getResponse)
 
     } catch (err) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
   app.delete("/api/items/:id", async (req, res) =>{
 
     try {
-      var getResponse = await items.post(req);
+      var getResponse = await items.delete(req);
       res.json(getResponse)
 
     } catch (err) {

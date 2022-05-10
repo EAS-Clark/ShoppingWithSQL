@@ -3,7 +3,7 @@ CREATE TABLE items (
   id         INT AUTO_INCREMENT NOT NULL,
   name      VARCHAR(256) NOT NULL,
   category_id     int NOT NULL,    
-  price         INT(50) NOT NULL,
+  price         decimal(50,2) NOT NULL,
   image_url     VARCHAR(256) NOT NULL,
 
   PRIMARY KEY (`id`),

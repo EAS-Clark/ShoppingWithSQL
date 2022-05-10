@@ -5,15 +5,17 @@ const getAll = async () => {
     return rows;
 }
 
-const create = async (name) => {
-    const response = await query("INSERT INTO items (name) VALUES (?)", [name]);
-    return
+
+const create = async (name, category_id, price, image_url) => {
+    const response = await query("INSERT INTO items (name, category_id, price, image_url) VALUES (?, ?, ?, ?)", [name, category_id, price, image_url]);
+    return response;
 }
 
 const getByID = async (id) => {
   const [row] = await query("SELECT * FROM items WHERE id=?", id);
   return row;
 }
+
 
 const update = async (id, name) => {
     const response = await query("UPDATE items SET name=?, WHERE id=?" , [name, id]);
