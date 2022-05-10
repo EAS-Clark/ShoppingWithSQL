@@ -23,8 +23,19 @@ module.exports = function (app) {
       res.json(err);
     }
   });
+  
+  app.get('/api/items/:id', async (req, res) => {
 
-  app.patch("/api/items", async (req, res) =>{
+    try {
+      var getResponse = await items.get(req);
+      res.json(getResponse)
+
+    } catch (err) {
+      res.json(err);
+    }
+  });
+
+  app.patch("/api/items/:id", async (req, res) =>{
 
     try {
       var getResponse = await items.post(req);
@@ -35,7 +46,7 @@ module.exports = function (app) {
     }
   });
 
-  app.delete("/api/items", async (req, res) =>{
+  app.delete("/api/items/:id", async (req, res) =>{
 
     try {
       var getResponse = await items.post(req);

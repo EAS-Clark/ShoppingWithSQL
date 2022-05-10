@@ -3,7 +3,9 @@ var categories = require('../route_functions/categories.js');
 module.exports = function (app) {
 
   app.get('/api/categories', async (req, res) => {
-
+    console.log('categories')
+    res.json('hi')
+    /*
     try {
       var getResponse = await categories.get(req);
       res.json(getResponse)
@@ -11,6 +13,7 @@ module.exports = function (app) {
     } catch (err) {
       res.json(err);
     }
+*/
   });
 
   app.post("/api/categories", async (req, res) =>{
@@ -23,8 +26,21 @@ module.exports = function (app) {
       res.json(err);
     }
   });
+
+  app.get('/api/categories/:id', async (req, res) => {
+      console.log('categories id ')
+/*
+    try {
+      var getResponse = await categories.get(req);
+      res.json(getResponse)
+
+    } catch (err) {
+      res.json(err);
+    }
+    */
+  });
   
-  app.patch("/api/categories", async (req, res) =>{
+  app.patch("/api/categories/:id", async (req, res) =>{
 
     try {
       var getResponse = await categories.post(req);
@@ -35,7 +51,7 @@ module.exports = function (app) {
     }
   });
 
-  app.delete("/api/categories", async (req, res) =>{
+  app.delete("/api/categories/:id", async (req, res) =>{
 
     try {
       var getResponse = await categories.post(req);
