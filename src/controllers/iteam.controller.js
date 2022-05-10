@@ -17,8 +17,8 @@ const getByID = async (id) => {
 }
 
 
-const update = async (id, name) => {
-    const response = await query("UPDATE items SET name=?, WHERE id=?" , [name, id]);
+const update = async (id, name, category_id, price, image_url) => {
+    const response = await query("UPDATE items SET name=?, category_id=?, price=?, image_url=? WHERE id=?" , [name, category_id, price, image_url, id]);
     return response;
 }
 
