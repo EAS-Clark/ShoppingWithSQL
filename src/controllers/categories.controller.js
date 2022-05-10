@@ -5,8 +5,8 @@ const getAll = async () => {
     return rows;
 }
 
-const create = async (name, category_id, price, image_url) => {
-    const response = await query("INSERT INTO categories (name, category_id, price, image_url) VALUES (? ? ? ?)", [name, category_id, price, image_url]);
+const create = async (name) => {
+    const response = await query("INSERT INTO categories (name) VALUES (?)", [name]);
     return
 }
 
@@ -15,8 +15,8 @@ const getByID = async (id) => {
   return row;
 }
 
-const update = async (id, name, category_id, price, image_url) => {
-    const response = await query("UPDATE categories SET name=?, category_id=?, price=?, image_url=? WHERE id=?" , [name, category_id, price, image_url, id]);
+const update = async (id, name) => {
+    const response = await query("UPDATE categories SET name=? WHERE id=?" , [name, id]);
     return response;
 }
 
