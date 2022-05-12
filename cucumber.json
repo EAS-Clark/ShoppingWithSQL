@@ -1,0 +1,87 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "first-feature;get-categories",
+        "keyword": "Scenario Outline",
+        "line": 4,
+        "name": "get categories",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a GET request to http://localhost:3000/api/categories",
+            "match": {
+              "location": "steps/test.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11568750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I receive a status code of 200",
+            "match": {
+              "location": "steps/test.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203250
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "first-feature;get-categories-by-id",
+        "keyword": "Scenario Outline",
+        "line": 8,
+        "name": "get categories by id",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I send a GET request to http://localhost:3000/api/categories/1",
+            "match": {
+              "location": "steps/test.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6245084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I receive a response name of sdfsdfsdf",
+            "match": {
+              "location": "steps/test.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155375
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "first-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "First feature",
+    "tags": [],
+    "uri": "features/test.feature"
+  }
+]
