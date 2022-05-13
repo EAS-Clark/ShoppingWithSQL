@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11568750
+              "duration": 18031124
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "I receive a status code of 200",
             "match": {
-              "location": "steps/test.js:12"
+              "location": "steps/test.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 203250
+              "duration": 194041
             }
           }
         ],
@@ -56,20 +56,54 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6245084
+              "duration": 5849041
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 10,
-            "name": "I receive a response name of sdfsdfsdf",
+            "name": "I receive a response name of test",
             "match": {
-              "location": "steps/test.js:17"
+              "location": "steps/test.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 155375
+              "duration": 125291.99999999999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "first-feature;modify-contact",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "modify contact",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I send PATCH request with a {\"name\": \"test\"} to http://localhost:3000/api/categories/1",
+            "match": {
+              "location": "steps/test.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12379999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I get response code 200",
+            "result": {
+              "status": "undefined",
+              "duration": 0
             }
           }
         ],
