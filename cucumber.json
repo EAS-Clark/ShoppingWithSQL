@@ -4,10 +4,10 @@
     "elements": [
       {
         "description": "",
-        "id": "first-feature;get-categories",
+        "id": "testing-categories-api;get-all-request",
         "keyword": "Scenario Outline",
         "line": 4,
-        "name": "get categories",
+        "name": "get all request",
         "steps": [
           {
             "arguments": [],
@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18031124
+              "duration": 12138208
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 6,
             "name": "I receive a status code of 200",
             "match": {
-              "location": "steps/test.js:22"
+              "location": "steps/test.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 194041
+              "duration": 237124
             }
           }
         ],
@@ -41,10 +41,10 @@
       },
       {
         "description": "",
-        "id": "first-feature;get-categories-by-id",
+        "id": "testing-categories-api;get-request-by-id",
         "keyword": "Scenario Outline",
         "line": 8,
-        "name": "get categories by id",
+        "name": "get request by id",
         "steps": [
           {
             "arguments": [],
@@ -56,7 +56,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5849041
+              "duration": 5625041
             }
           },
           {
@@ -65,11 +65,11 @@
             "line": 10,
             "name": "I receive a response name of test",
             "match": {
-              "location": "steps/test.js:27"
+              "location": "steps/test.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 125291.99999999999
+              "duration": 119625
             }
           }
         ],
@@ -78,28 +78,133 @@
       },
       {
         "description": "",
-        "id": "first-feature;modify-contact",
+        "id": "testing-categories-api;get-request-by-id-retrun-name",
         "keyword": "Scenario Outline",
         "line": 12,
-        "name": "modify contact",
+        "name": "get request by id retrun name",
         "steps": [
           {
             "arguments": [],
             "keyword": "When ",
             "line": 13,
-            "name": "I send PATCH request with a {\"name\": \"test\"} to http://localhost:3000/api/categories/1",
+            "name": "I send a GET request to http://localhost:3000/api/categories/1",
             "match": {
-              "location": "steps/test.js:16"
+              "location": "steps/test.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 12379999
+              "duration": 4876708
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 14,
+            "name": "I receive a response name of test",
+            "match": {
+              "location": "steps/test.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75124
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-categories-api;modify-contact",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "modify contact",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I send PATCH request with a {\"name\": \"test\"} to http://localhost:3000/api/categories/1",
+            "match": {
+              "location": "steps/test.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6212832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I get response code 200",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-categories-api;uploading-contact",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "uploading contact",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I send POST request with a {\"name\": \"test\"} to http://localhost:3000/api/categories",
+            "match": {
+              "location": "steps/test.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9939374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I get response code 200",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "testing-categories-api;get-delete-by-id",
+        "keyword": "Scenario Outline",
+        "line": 24,
+        "name": "get delete by id",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I send a DELETE request to http://localhost:3000/api/categories/12",
+            "match": {
+              "location": "steps/test.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8847750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
             "name": "I get response code 200",
             "result": {
               "status": "undefined",
@@ -111,10 +216,10 @@
         "type": "scenario"
       }
     ],
-    "id": "first-feature",
+    "id": "testing-categories-api",
     "line": 1,
     "keyword": "Feature",
-    "name": "First feature",
+    "name": "testing categories api",
     "tags": [],
     "uri": "features/test.feature"
   }
