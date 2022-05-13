@@ -5,9 +5,6 @@ Scenario Outline: get all request
     When I send a GET request to http://localhost:3000/api/categories
     Then I receive a status code of 200
 
-Scenario Outline: get request by id 
-    When I send a GET request to http://localhost:3000/api/categories/1
-    Then I receive a response name of test
 
 Scenario Outline: get request by id retrun name
     When I send a GET request to http://localhost:3000/api/categories/1
