@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12138208
+              "duration": 10574124
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 237124
+              "duration": 188624
             }
           }
         ],
@@ -56,7 +56,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5625041
+              "duration": 3646041
             }
           },
           {
@@ -69,7 +69,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 119625
+              "duration": 85374
             }
           }
         ],
@@ -93,7 +93,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4876708
+              "duration": 3444499
             }
           },
           {
@@ -106,7 +106,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75124
+              "duration": 78874
             }
           }
         ],
@@ -130,17 +130,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6212832
+              "duration": 6488583
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 18,
-            "name": "I get response code 200",
+            "name": "I receive a status code of 200",
+            "match": {
+              "location": "steps/test.js:33"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 342417
             }
           }
         ],
@@ -164,17 +167,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9939374
+              "duration": 16134083
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 22,
-            "name": "I get response code 200",
+            "name": "I receive a status code of 200",
+            "match": {
+              "location": "steps/test.js:33"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 143541
             }
           }
         ],
@@ -198,17 +204,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8847750
+              "duration": 7894500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 26,
-            "name": "I get response code 200",
+            "name": "I receive a status code of 200",
+            "match": {
+              "location": "steps/test.js:33"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 166208
             }
           }
         ],

@@ -10,23 +10,16 @@ When('I send a GET request to {}', async function (url) {
 
 When('I send a DELETE request to {}', async function (url) {
     const response = await restHelper.deleteData(`${url}`);
-   
-
-    console.log('DELETE test: ' + response.status);
     this.response = response;
 });
 
 When('I send PATCH request with a {} to {}', async function (data, url) {
     const response = await restHelper.patchData(`${url}`, JSON.parse(data));
-
-    console.log('patch test: ' + JSON.stringify(response.status));
     this.response = response;
 });
 
 When('I send POST request with a {} to {}', async function (data, url) {
     const response = await restHelper.postData(`${url}`, JSON.parse(data));
-
-    console.log('POST test: ' + JSON.stringify(response.status));
     this.response = response;
 });
 
